@@ -17,14 +17,14 @@ void functionA(int a, int b)
 {
      a = rand() % 9 + 1;
      b = rand() % 9 + 1;
-     printf("执行functionA，参数为 %d 和 %d\n", a, b);
+     printf("执行functionA,参数为 %d 和 %d\n", a, b);
    int sum = a + b;
    int answer;
    int count = 0;
    int useranswer;
    int stars;
    scanf("%d", &answer);
-   printf("functionA，返回值为 %d\n", sum);
+   printf("functionA,返回值为 %d\n", sum);
    scanf("%c", &stars);
         if (stars != 'q') {
             printf("输入字母'q'开始游戏");
@@ -64,17 +64,17 @@ void functionA(int a, int b)
 }
 void functionB(int a, int b)
 {
-    printf("执行%s，参数为 %d 和 %d\n",__func__, a, b);
+    printf("执行%s,参数为 %d 和 %d\n",__func__, a, b);
 }
 
 void functionC(int a, int b)
 {
-    printf("执行functionC，参数为 %d 和 %d\n", a, b);
+    printf("执行functionC,参数为 %d 和 %d\n", a, b);
 }
 
 void arithmetic_operation(int a, int b, char fuhao)
 {
-    printf("执行functionD，参数为 %d 和 %d\n", a, b);
+    printf("执行functionD,参数为 %d 和 %d\n", a, b);
     int result1=0;
     float result2=0.0;
     switch (fuhao) {
@@ -83,15 +83,18 @@ void arithmetic_operation(int a, int b, char fuhao)
             // result1 = a + b;
             break;
         case '-':
-            result1 = a - b;
+            result1=sbc_func(a, b);
+            // result1 = a - b;
             break;
         case '*':
-            result1 = a * b;
+            result1=mpc_func(a, b);
+            // result1 = a * b;
             break;
         case '/':
         if(fuhao=='/',b!=0)
             {
-                result2 = (float)a / (float)b;
+                result2 = dvs_func((float) a,(float) b);
+                // result2 = (float)a / (float)b;
             }
            printf("计算结果为：%.6f\n", result2);
             break;
@@ -112,7 +115,7 @@ int main() {
     char fuhao;
     
     while(1){
-        printf("请输入命令:(a,b,c，d)");
+        printf("请输入命令:(a,b,c,d)");
         scanf(" %c", &command);
         switch (command) {
             case 'a':
@@ -125,9 +128,9 @@ int main() {
                 functionArray[2](a, b);
                 break;
             case 'd':
-                printf("请输入两个整数和一个运算符（+、-、*、/）：\n");
+                printf("请输入两个整数和一个运算符（+、-、*、/）:\n");
                 scanf("%d %c %d", &a, &fuhao, &b);
-                printf("执行functionD，传入参数为 %d 和 %d\n", a, b);
+                printf("执行functionD,传入参数为 %d 和 %d\n", a, b);
                 arithmetic_operation(a, b, fuhao);
                 break;
             case 'q':
