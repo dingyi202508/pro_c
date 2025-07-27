@@ -107,7 +107,7 @@ void arithmetic_operation(int a, int b, char fuhao)
 int main() {
     char stars;
     int a, b, answer, useranswer,d;
-    int count = 0;
+    // int count = 0;
     char command;
     char fuhao;
     
