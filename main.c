@@ -4,23 +4,6 @@
 #include "calc_func.h"
 #include "func.h"
 
-// void functionB(int a, int b);
-// void arithmetic_operation(int a, int b, char fuhao);
-// void (*functionArray[4])(int a, int b) = {
-//     functionB,
-// };
-
-
-// void functionB(int a, int b)
-// {
-//     printf("执行%s,参数为 %d 和 %d\n",__func__, a, b);
-// }
-
-// void functionC(int a, int b)
-// {
-//     printf("执行functionC,参数为 %d 和 %d\n", a, b);
-// }
-
 int main() {
     char stars;
     int a, b, answer, c, d , useranswer;
