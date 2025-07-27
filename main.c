@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "calc_func.h"
-#include "func.h"
+#include "swap_func.h"
 
 int main() {
     char stars;
