@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-// #include "calc_func.h"
+#include "calc_func.h"
 
 void functionA(int a, int b);
 void functionB(int a, int b);
@@ -79,8 +79,8 @@ void arithmetic_operation(int a, int b, char fuhao)
     float result2=0.0;
     switch (fuhao) {
         case '+':
-            // result1 = add_func(a,b);
-            result1 = a + b;
+            result1 = add_func(a,b);
+            // result1 = a + b;
             break;
         case '-':
             result1 = a - b;
